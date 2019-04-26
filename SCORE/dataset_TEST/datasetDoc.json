@@ -1,0 +1,90 @@
+{
+  "about": {
+    "datasetID": "31_urbansound_dataset_TEST",
+    "datasetName": "NULL",
+    "license": "Creative Commons Attribution Noncommercial License (by-nc), version 3.0",
+    "approximateSize": "12 GB",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": true,
+    "datasetVersion": "2.0",
+    "digest": "2ed95332eaf4dcd4d80714adc97487ad29806c1ea51af55aeaf557dfdfba0c2b"
+  },
+  "dataResources": [
+    {
+      "resID": "0",
+      "resPath": "media/",
+      "resType": "audio",
+      "resFormat": [
+        "audio/wav",
+        "audio/aiff",
+        "audio/flac",
+        "audio/ogg",
+        "audio/mpeg"
+      ],
+      "isCollection": true
+    },
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "filename",
+          "colType": "string",
+          "role": [
+            "attribute"
+          ],
+          "refersTo": {
+            "resID": "0",
+            "resObject": "item"
+          }
+        },
+        {
+          "colIndex": 2,
+          "colName": "start",
+          "colType": "real",
+          "role": [
+            "boundaryIndicator"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "end",
+          "colType": "real",
+          "role": [
+            "boundaryIndicator"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "salience",
+          "colType": "real",
+          "role": [
+            "instanceWeight"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}
