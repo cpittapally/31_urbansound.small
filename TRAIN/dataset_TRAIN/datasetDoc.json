@@ -1,1 +1,90 @@
-/nfs/deft-dev100/u10/cpittapa/workspace/D3M/d3m_datasets/datasets/seed_datasets_current/31_urbansound/TRAIN/dataset_TRAIN/datasetDoc.json
+{
+  "about": {
+    "datasetID": "31_urbansound_dataset_TRAIN",
+    "datasetName": "NULL",
+    "license": "Creative Commons Attribution Noncommercial License (by-nc), version 3.0",
+    "approximateSize": "12 GB",
+    "datasetSchemaVersion": "3.2.0",
+    "redacted": true,
+    "datasetVersion": "2.0",
+    "digest": "f50da228178a419c48d9e5c27d1878b8cbf4b45364d78d660e22ce0ba773a59c"
+  },
+  "dataResources": [
+    {
+      "resID": "0",
+      "resPath": "media/",
+      "resType": "audio",
+      "resFormat": [
+        "audio/wav",
+        "audio/aiff",
+        "audio/flac",
+        "audio/ogg",
+        "audio/mpeg"
+      ],
+      "isCollection": true
+    },
+    {
+      "resID": "learningData",
+      "resPath": "tables/learningData.csv",
+      "resType": "table",
+      "resFormat": [
+        "text/csv"
+      ],
+      "isCollection": false,
+      "columns": [
+        {
+          "colIndex": 0,
+          "colName": "d3mIndex",
+          "colType": "integer",
+          "role": [
+            "index"
+          ]
+        },
+        {
+          "colIndex": 1,
+          "colName": "filename",
+          "colType": "string",
+          "role": [
+            "attribute"
+          ],
+          "refersTo": {
+            "resID": "0",
+            "resObject": "item"
+          }
+        },
+        {
+          "colIndex": 2,
+          "colName": "start",
+          "colType": "real",
+          "role": [
+            "boundaryIndicator"
+          ]
+        },
+        {
+          "colIndex": 3,
+          "colName": "end",
+          "colType": "real",
+          "role": [
+            "boundaryIndicator"
+          ]
+        },
+        {
+          "colIndex": 4,
+          "colName": "salience",
+          "colType": "real",
+          "role": [
+            "instanceWeight"
+          ]
+        },
+        {
+          "colIndex": 5,
+          "colName": "class",
+          "colType": "categorical",
+          "role": [
+            "suggestedTarget"
+          ]
+        }
+      ]
+    }
+  ]
+}
